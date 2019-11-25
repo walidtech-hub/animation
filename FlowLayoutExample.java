@@ -22,9 +22,13 @@ public class FlowLayoutExample {
 
 	FlowLayoutExample(){
 		JFrame frame = new JFrame("Flow Layout");
+
+        // designing button
 		JButton button,button1, button2, button3,button4;
-		button = new JButton("video");
-		button1 = new JButton("button 2");
+
+        // creating button
+		button = new JButton("Animation");
+		button1 = new JButton("Video");
 		button2 = new JButton("button 3");
 		button3 = new JButton("button 4");
 		frame.add(button);
@@ -33,7 +37,14 @@ public class FlowLayoutExample {
 		frame.add(button3);
 
         // button 1 link
-        button.addActionListener(new ActionListener() {
+        button1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                openWebPage("");    // PUT YOUR WEBSITE HERE!!!!
+            }
+        });
+
+        // button 1 link
+        button1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
                 openWebPage("https://youtu.be/Re457SbYWLs");
             }
@@ -42,8 +53,8 @@ public class FlowLayoutExample {
 		frame.setLayout(new FlowLayout());
 		frame.setSize(300,300);
 		frame.setVisible(true);
-
 	}
+
 	public static void main(String[] args) {
 		new FlowLayoutExample();
 	}
