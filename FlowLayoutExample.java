@@ -9,18 +9,21 @@ import java.awt.event.ActionListener;
 
 public class FlowLayoutExample {
 
+    // needed for URL link
     public void openWebPage(String url){
-   try {
-     java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
-   }
-   catch (java.io.IOException e) {
-       System.out.println(e.getMessage());
+        try {
+        java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+        }
+
+        catch (java.io.IOException e) {
+        System.out.println(e.getMessage());
    }
 }
+
 	FlowLayoutExample(){
 		JFrame frame = new JFrame("Flow Layout");
 		JButton button,button1, button2, button3,button4;
-		button = new JButton("button 1");
+		button = new JButton("video");
 		button1 = new JButton("button 2");
 		button2 = new JButton("button 3");
 		button3 = new JButton("button 4");
@@ -29,9 +32,10 @@ public class FlowLayoutExample {
 		frame.add(button2);
 		frame.add(button3);
 
+        // button 1 link
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                openWebPage("http://www.pornhub.com");
+                openWebPage("https://youtu.be/Re457SbYWLs");
             }
         });
 
