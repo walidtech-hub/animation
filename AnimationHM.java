@@ -7,11 +7,10 @@ import java.io.*;
 public class AnimationHM{
 
 
-
-  public static void main(String[]args) 
-    throws IOException, InterruptedException
-    {
+  public static void main(String[]args) throws IOException, InterruptedException
+  {
     //create sprites as string arrays.
+
 
       String[] spriteHM1 =
       {
@@ -33,6 +32,7 @@ public class AnimationHM{
 "              ||=============||                      ",
 "--------------||=============||----------------------",
 		};
+
 
 	  String[] spriteHM2 =
       {
@@ -149,7 +149,7 @@ String[] spriteHM4 ={
   */
    public static void print(String[] printable) throws IOException, InterruptedException
    {
-     cls();
+     clear();
      //System.out.println(ANSI_CLEAR_SCREEN + ANSI_RED + ANSI_BOLD);
      for(int k = 0; k < printable.length; k++)
      {
@@ -166,13 +166,13 @@ String[] spriteHM4 ={
    */
    public static void animate(String[] printable) throws IOException, InterruptedException
    {
-     cls();
+     clear();
      //System.out.println(ANSI_CLEAR_SCREEN + ANSI_GREEN + ANSI_BOLD);
 
      for(int path = 0; path < printable.length; path++)
      {
 	   Thread.sleep(500);
-     cls();
+     clear();
      //System.out.println(ANSI_CLEAR_SCREEN + ANSI_GREEN + ANSI_BOLD);
        for(int k = 0; k < printable.length; k++)
        {
@@ -189,8 +189,7 @@ String[] spriteHM4 ={
 /**
  * a quick process that clears the screen  Currently only for windows users.
  */
-    public static void cls() throws IOException, InterruptedException {
-        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-    }//end cls
-
+    public static void clear() throws IOException, InterruptedException {
+        new ProcessBuilder("clear").inheritIO().start().waitFor();
+    }//end clear
 }//end class
