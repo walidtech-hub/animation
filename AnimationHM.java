@@ -8,10 +8,10 @@ public class AnimationHM{
 
 
 
-  public static void main(String[]args) throws IOException, InterruptedException
-  {
+  public static void main(String[]args) 
+    throws IOException, InterruptedException
+    {
     //create sprites as string arrays.
-
 
       String[] spriteHM1 =
       {
@@ -33,7 +33,6 @@ public class AnimationHM{
 "              ||=============||                      ",
 "--------------||=============||----------------------",
 		};
-
 
 	  String[] spriteHM2 =
       {
